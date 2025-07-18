@@ -34,8 +34,8 @@ router.beforeEach(async (to, _) => {
       const isValid = await store.validateToken()
 
       if (!isValid) {
-        // token 无效，重定向到登录页
-        return { name: 'login' }
+        // token 无效，重定向到登录页，并带上原目标页面
+        return { name: 'login', query: { redirect: to.fullPath } }
       }
     }
     console.log('需要认证的路由:', to.name)
