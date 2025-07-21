@@ -10,14 +10,14 @@ const router = createRouter({
       component: () => import('@/views/Login.vue')
     },
     {
-      path: '/',
-      redirect: '/login'
+      path: '/login',
+      redirect: '/nav'
     },
     {
       path: '/nav',
       name: 'nav',
       component: () => import('@/views/Nav.vue'),
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: false }
     }
   ]
 })
