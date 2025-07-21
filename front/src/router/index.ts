@@ -13,6 +13,10 @@ const router = createRouter({
       path: '/',
       redirect: '/nav'
     },
+     {
+      path: '/login',
+      redirect: '/nav'
+    },
     {
       path: '/nav',
       name: 'nav',
