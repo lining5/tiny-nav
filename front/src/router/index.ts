@@ -21,7 +21,7 @@ const router = createRouter({
       path: '/nav',
       name: 'nav',
       component: () => import('@/views/Nav.vue'),
-      meta: { requiresAuth: true }
+      meta: { requiresAuth: false }
     }
   ]
 })
